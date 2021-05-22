@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Módulo 2 Evaluación final</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+   
+  </head>
+
+  <body>
+    <div class="page">
+      <include src="./partials/header.html" ></include>
+      <main class="page__main">
+        <h1 class="title">Buscador de series</h1>
+        <form action="#" class="js-form">
+            <input class="js-search" type="text" name="txtsearch" id="txtsearch" placeholder="Nombre película">
+            <input class="js-btn-search" type="button" name="btnsearch" id="btnsearch" value="Search">
+        </form>
+       <h2 class="fav__title">Mis series favoritas</h2>
+        <div class="container">
+          <div class="fav_container">
+            <ul class="js-favList"></ul>
+            <button class="resetBtn js-resetBtn">Borrar favoritas</button>
+          </div>
+    
+          <ul class="js-listfilm"></ul>
+        </div>
+    </main>
+      <include src="./partials/footer.html"></include>
+    </div>
+    <script src="./assets/js/main.js"></script>
+
+  </body>
+</html>
