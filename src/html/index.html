@@ -1,36 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Módulo 2 Evaluación final</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis series favoritas</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
-   
-  </head>
-
-  <body>
-    <div class="page">
-      <include src="./partials/header.html" ></include>
-      <main class="page__main">
-        <h1 class="title">Buscador de series</h1>
-        <form action="#" class="js-form">
-            <input class="js-search" type="text" name="txtsearch" id="txtsearch" placeholder="Nombre película">
-            <button class="js-btn-search">Search</button>
-         </form>
-       <h2 class="fav__title">Mis series favoritas</h2>
-        <div class="container">
-          <div class="fav_container">
-            <ul class="js-favList"></ul>
-            <button class="resetBtn js-resetBtn">Borrar favoritas</button>
-          </div>
     
-          <ul class="js-listfilm"></ul>
-        </div>
-    </main>
-      <include src="./partials/footer.html"></include>
+  </head>
+  <body class="page">
+    <h1 class="title">Buscador de series</h1>
+    <form class="js-form" method="GET">
+      <input type="text" class="js-inputsearch input" />
+      <button class="js-btnsearch btn">Buscar</button>
+    </form>
+    <h2 class="fav__title">
+      Mis series favoritas</i>
+    </h2>
+    <div class="container">
+      <div class="fav_wrapper">
+        <ul class="js-favoritesList ulFav"></ul>
+        <button class="resetBtn js-resetBtn">Borrar favoritas</button>
+      </div>
+      <ul class="js-seriesList ulSeries"></ul>
     </div>
-    <script src="./assets/js/main.js"></script>
 
+    <script type="text/javascript" src="./assets/js/main.js"></script>
   </body>
 </html>

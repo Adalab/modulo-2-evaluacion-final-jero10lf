@@ -1,21 +1,37 @@
-let globalFilm = [];
-let favoriteFilm = [];
+"use strict";
 
-function getdataApi() {
-  let inputValue = filmsearchElement.value;
-  fetch(`https://api.tvmaze.com/search/shows?q=${inputValue}`)
+const filterElement = document.querySelector(".js-inputsearch");
+const searchElement = document.querySelector(".js-btnsearch");
+const formElement = document.querySelector(".js-form");
+
+const favoritesListElement = document.querySelector(".js-favoritesList");
+
+let series = [];
+let favorites = [];
+
+// API
+const url = `//api.tvmaze.com/search/shows?q=`;
+
+function getSeriesFromApi(title) {
+  fetch(url + title)
     .then((response) => response.json())
     .then((data) => {
-      for (const oneData of data) {
-        globalFilm.push(oneData.show);
+      series = [];
+      for (const oneShow of data) {
+        series.push(oneShow.show);
       }
-      renderFilm();
+      renderSeries();
     });
 }
 
+// search data input
+
 function handleSearch(ev) {
-  getdataApi();
+  let filterValue = filterElement.value;
+  getSeriesFromApi(filterValue);
 }
+
+searchElement.addEventListener("click", handleSearch);
 
 // submit form
 
@@ -23,19 +39,34 @@ function handleForm(ev) {
   ev.preventDefault();
 }
 
-btnsearchElement.addEventListener("click", handleSearch);
 formElement.addEventListener("submit", handleForm);
 
-function renderFilm() {
-  listfilm.innerHTML = "";
-  for (const film of globalFilm) {
-    listfilm.innerHTML += `<li id="${film.id}" class="film__list--itemclas js-film">`;
-    listfilm.innerHTML += `<h3 class="film__title">${film.name}</h3>`;
-    if (film.image === null) {
-      listfilm.innerHTML += `<img class="serie__img" src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV" title="${film.name}" alt="${film.name} cover not available"/>`;
+function renderSeries() {
+  const seriesListElement = document.querySelector(".js-seriesList");
+
+  let htmlCode = "";
+
+  for (const serie of series) {
+    let isSerieClass;
+    let serieInFavorites = favorites.findIndex(
+      (favorite) => favorite.id === serie.id
+    );
+
+    if (serieInFavorites === -1) {
+      isSerieClass = "serie";
     } else {
-      listfilm.innerHTML += `<img class="serie__img" src="${film.image.medium}" title="${film.name}" alt="${film.name}  cover"/>`;
+      isSerieClass = "selected";
     }
-    listfilm.innerHTML += "</li>";
+
+    htmlCode += `<li id ="${serie.id}" class="js-serie li__serie ${isSerieClass} >`;
+    htmlCode += `<h3 class="liTitle">${serie.name}</h3>`;
+    if (serie.image === null) {
+      htmlCode += `<img class="serie__img" src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV" title="${serie.name}" alt="${serie.name} cover not available"/>`;
+    } else {
+      htmlCode += `<img class="serie__img" src="${serie.image.medium}" title="${serie.name}" alt="${serie.name}  cover"/>`;
+    }
+    htmlCode += "</li>";
   }
+
+  seriesListElement.innerHTML = htmlCode;
 }
