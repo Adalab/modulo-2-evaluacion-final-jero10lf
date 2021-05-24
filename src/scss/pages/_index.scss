@@ -11,6 +11,12 @@
   flex: wrap;
   margin: 30px;
 }
+.fav_container{
+  display: flex;
+  flex-direction: column-reverse;
+  flex:wrap;
+  align-content: flex-start;
+}
 .ulSeries {
   display: flex;
   flex-wrap: wrap;
@@ -22,8 +28,19 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
-  color: rgb(182, 199, 189);
-  background-color: darkslategrey;
+  color: rgb(95, 17, 109);
+  background-color: rgb(199, 131, 226);
   font-size: 20px;
   padding-top: 20px;
+  
+  }
+  .selected{
+    color:rgb(199, 131, 226);
+    background: rgb(95, 17, 109);
+  }
+
+  .fa {
+    cursor: pointer;
+    margin: 0 20px;
+    size:10px;
   }
