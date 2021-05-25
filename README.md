@@ -3,6 +3,14 @@
 El ejercicio consiste en desarrollar una aplicación web de búsqueda de series de TV, que nos permite
 des/marcar las series como favoritas y guardarlas en local storage.
 
+## Cómo funciona
+
+Rellenando el campo de búsqueda y haciendo click en el botón buscar obtienes un listado del servidor de http://www.tvmaze.com/.
+
+Para guardar una serie en tu listado de favoritos sólo tienes que clicar sobre ella. Cada vez que accedas a la web tendrás tu listado de favoritos disponible.
+
+Si quieres borrar una serie del listado, pulsa sobre el icono de x. Si quieres borrar todo el listado, pulsa el botón de Borrar Favoritos.
+
 ## Pasos seguidos para realizar esta práctica:
 
 Tras recibir práctica y descargarla:
