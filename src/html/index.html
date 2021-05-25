@@ -5,31 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mis series favoritas</title>
-    <script
-    src="https://kit.fontawesome.com/e03992df77.js"
-    crossorigin="anonymous"
-  ></script>
+   
     <link rel="stylesheet" href="./assets/css/main.css" />
     
   </head>
   <body class="page">
+  <header class="header">
     <h1 class="title">Buscador de series</h1>
-    <form class="js-form" method="GET">
+  </header>
+  <main>
+    <form class="form js-form" method="GET">
       <input type="text" class="js-inputsearch input" />
-      <button class="js-btnsearch btn">Buscar</button>
+      <button class="js-btnsearch btnSearch">Buscar</button>
     </form>
-    <h2 class="fav__title">
-      Mis series favoritas</i>
-    </h2>
-    <div class="container">
-     
-      <div class="fav_container">
+    <div class="containerul">
+      <div class="fav_container ">
+        <h2 class="fav__title"> Mis series favoritas </h2>    
+        <button class="resetBtnfav js-resetBtnfav">Borrar favoritas</button>      
         <ul class="js-favoritesList ulFav"></ul>
-        <button class="resetBtnfav js-resetBtnfav">Borrar favoritas</button>
+        
       </div>
-      <ul class="js-seriesList ulSeries"></ul>
-    </div>
-
+      <div class="series_container"> <ul class="js-seriesList ulSeries"></ul></div>
+    
+  </div>
+</main>
     <script type="text/javascript" src="./assets/js/main.js"></script>
   </body>
 </html>

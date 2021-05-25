@@ -1,5 +1,5 @@
 function listenClickedFavorites() {
-  const liElements = document.querySelectorAll(".js-favoritesList");
+  const liElements = document.querySelectorAll(".js-deleteIcon");
   for (const liElement of liElements) {
     liElement.addEventListener("click", deleteFav);
   }
@@ -8,11 +8,10 @@ function listenClickedFavorites() {
 function deleteFav(event) {
   const clickeddelfav = event.currentTarget;
   const clickedFav = parseInt(clickeddelfav.id);
-  const favFound = favorites.find((fav) => fav.id === clickedFav);
+  const favFound = favorites.findIndex((fav) => fav.id === clickedFav);
 
-  series.push(favFound);
   favorites.splice(favFound, 1);
-
+  setInLocalStorage();
   renderFavorites();
   renderSeries();
 }
