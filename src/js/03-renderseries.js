@@ -1,3 +1,4 @@
+// Paint series
 function renderSeries() {
   const seriesListElement = document.querySelector(".js-seriesList");
 

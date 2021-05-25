@@ -1,9 +1,12 @@
+//I listen to the series list to add to favorites
 function listenClickedSeries() {
   const liElements = document.querySelectorAll(".js-serie");
   for (const liElement of liElements) {
     liElement.addEventListener("click", addFavorites);
   }
 }
+
+// Add to array favorites
 function addFavorites(event) {
   const clickedfavorite = event.currentTarget;
   const clickedSerie = parseInt(clickedfavorite.id);
@@ -20,8 +23,11 @@ function addFavorites(event) {
   renderSeries();
   renderFavorites();
 }
+
+// Paint favorites
 function renderFavorites() {
   let htmlCode = "";
+
   for (const elementFavorite of favorites) {
     htmlCode += `<li id ="${elementFavorite.id}" class="js-serieFav li__fav"  >`;
     htmlCode += ` <div class="fav_content">`;

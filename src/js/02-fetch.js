@@ -16,8 +16,7 @@ function getSeriesFromApi(txtInput) {
 }
 
 // search data input
-
-function handleSearch(ev) {
+function handleSearch() {
   let inputValue = filterElement.value;
   getSeriesFromApi(inputValue);
 }
@@ -25,7 +24,6 @@ function handleSearch(ev) {
 searchElement.addEventListener("click", handleSearch);
 
 // submit form
-
 function handleForm(ev) {
   ev.preventDefault();
 }
