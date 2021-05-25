@@ -1,23 +1,28 @@
-# Práctica realizada a partir de una plantilla adaptada a partir de un Starter kit de Adalab.
+# Práctica realizada a partir de una plantilla del Starter kit de Adalab.
 
-Este Kit incluye un motor de plantillas HTML, el preprocesador SASS y un servidor local y muchas cosas más. El Kit nos ayuda a trabajar más cómodamente, nos automatiza tareas.
+El ejercicio consiste en desarrollar una aplicación web de búsqueda de series de TV, que nos permite
+des/marcar las series como favoritas y guardarlas en local storage.
 
-E
+## Pasos seguidos para realizar esta práctica:
 
-### Pasos seguidos para realizar esta práctica:
+Tras recibir práctica y descargarla:
 
-1. **Crear repositorio.**
-1. Descarga este **Starter kit desde GitHub**.
-   - No recomendamos que clones este repo ya que no podrás añadir commits.
-1. **Copia todos los ficheros** de este Starter kit en la carpeta raíz de tu repositorio.
-   - Recuerda que debes copiar **también los ficheros ocultos**.
-   - Si has decidido clonar este repo, no debes copiar la carpeta `.git`. Si lo haces estarás machacando tu propio repositorio.
-1. **Abre una terminal** en la carpeta raíz de tu repositorio.
-1. **Instala las dependencias** locales ejecutando en la terminal el comando:
+- Leer y desglosar en tareas sencillas a realizar.
 
-```bash
-npm install
-```
+* Crear repositorio y clonar
+
+- Comenzar con la estructura en HTML.
+
+- Crear parte de JavaScript
+
+- Depurar código.
+
+* Todo ello sin olvidarnos de ir haciendo **commits** _sobre los cambios constantes_ - más o menos realizados 
+* Por último un npm run docs y subimos al git.
+  ## Enlace práctica :
+  [http://beta.adalab.es/modulo-1-evaluacion-final-jero10lf/]
+
+**_Cualquier mejora o fallo que encontréis será bien recibido. Gracias._**
 
 ### Pasos para arrancar el proyecto:
 
